@@ -33,7 +33,6 @@
 - Python 3.13+
 - Node.js 18+
 - MySQL 数据库（创建 `yiliao` 数据库）
-- 通义千问 API Key
 
 ### 后端启动
 
