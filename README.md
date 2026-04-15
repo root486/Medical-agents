@@ -26,6 +26,35 @@
 - **MCP 协议**：通过 FastMCP 实现 stdio 传输的 MCP Server，提供患者历史记录查询工具
 - **Time Travel**：利用 LangGraph 的 `update_state(as_node=...)` 实现状态回溯到任意节点
 - **Memory 管理**：短期记忆（进程内存）+ 长期记忆（Chroma 向量库持久化）
+## 快速开始
+
+### 前置要求
+
+- Python 3.13+
+- Node.js 18+
+- MySQL 数据库（创建 `yiliao` 数据库）
+- 通义千问 API Key
+
+### 后端启动
+
+```bash
+cd backend
+pip install -r requirements.txt
+# 编辑 .env 填入 DASHSCOPE_API_KEY
+python main.py
+```
+
+后端运行在 `http://localhost:8000`，API 文档 `http://localhost:8000/docs`
+
+### 前端启动
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+前端运行在 `http://localhost:3000`
 
 ## 项目结构
 
@@ -115,35 +144,6 @@ START
       END
 ```
 
-## 快速开始
-
-### 前置要求
-
-- Python 3.13+
-- Node.js 18+
-- MySQL 数据库（创建 `yiliao` 数据库）
-- 通义千问 API Key
-
-### 后端启动
-
-```bash
-cd backend
-pip install -r requirements.txt
-# 编辑 .env 填入 DASHSCOPE_API_KEY
-python main.py
-```
-
-后端运行在 `http://localhost:8000`，API 文档 `http://localhost:8000/docs`
-
-### 前端启动
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-前端运行在 `http://localhost:3000`
 
 ## API 接口
 
